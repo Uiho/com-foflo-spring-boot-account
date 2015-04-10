@@ -1,5 +1,5 @@
 package org.uchoi.banking.account.dao;
 
-public class AccountDaoImpl {
+public interface AccountDao {
 
 }
