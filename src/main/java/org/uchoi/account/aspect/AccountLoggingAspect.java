@@ -1,34 +1,38 @@
-package org.uchoi.account;
+package org.uchoi.account.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
+@Aspect
+@Component // Without Component annotation, it'll not work at all.
 public class AccountLoggingAspect {
 	
 	private static Logger logger = LoggerFactory.getLogger(AccountLoggingAspect.class);
 	
 	
 	
-	@Before("execution(* org.uchoi.account.*(..))")
+	@Before("execution(* org.uchoi.account.view.*.*(..))")
 	public void logBefore(JoinPoint jp){
 		
 		logger.info("Entering into "+jp.getSignature());
 	}
 	
 	
-	@After("execution(* org.uchoi.account.*(..))")
+	@After("execution(* org.uchoi.account.view.*.*(..))")
 	public void logAfter(JoinPoint jp) {
  
 		logger.info("Escaping from "+jp.getSignature());
  
 	}
 	
-	@AfterReturning(pointcut = "execution(* banking.dao.AccountDaoImpl.saveAccount(..))", returning= "result")
+	@AfterReturning(pointcut = "execution(* org.uchoi.account.service.AccountServiceImpl.getSpecificAccount(..))", returning= "result")
 	public void logAfterReturning(JoinPoint jp, Object result) {
 		
 		logger.info(jp.getSignature()+", return value: "+ result);
@@ -36,7 +40,7 @@ public class AccountLoggingAspect {
 	
 	
 	
-	@AfterThrowing(pointcut="execution(* banking.dao.AccountDaoImpl.saveAccount(..)", throwing="error")
+	@AfterThrowing(pointcut="execution(* org.uchoi.account.service.AccountServiceImpl.getSpecificAccount(..))", throwing="error")
 	public void logAfterThrowing(JoinPoint jp, Throwable error){
 		
 		logger.info(jp.getSignature()+", Error: "+ error);

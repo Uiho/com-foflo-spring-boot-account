@@ -28,6 +28,9 @@ public class Account {
 	
 	
 	
+	public Account() {
+	}
+
 	public Account(Double accountBalance, Customer customer) {
 		super();
 		this.accountBalance = accountBalance;

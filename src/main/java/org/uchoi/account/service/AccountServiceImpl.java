@@ -34,9 +34,9 @@ public class AccountServiceImpl implements AccountService{
 	}
 
 	@Override
-	public String getSpecificAccount(Integer number) {
-		accountDao.getSpeicificAccount(number);
-		return null;
+	public Account getSpecificAccount(Integer number) {
+		Account account = accountDao.getSpeicificAccount(number);
+		return account;
 	}
 
 	@Override

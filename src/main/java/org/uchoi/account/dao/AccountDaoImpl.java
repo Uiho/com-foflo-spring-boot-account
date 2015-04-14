@@ -53,7 +53,7 @@ public class AccountDaoImpl implements AccountDao {
 	}
 
 	@Override
-	public Account saveAccount(String name, Double initialBalance) {
+	public Account saveAccount(String name, Double initialBalance){
 		InsertAccount(initialBalance, InsertCustomer(name));
 		logger.info("You've Finished creating a bank account for " + name);
 		return null;
@@ -68,8 +68,8 @@ public class AccountDaoImpl implements AccountDao {
 
 	@Override
 	public Account getSpeicificAccount(Integer number) {
-		// TODO Auto-generated method stub
-		return null;
+		Account account = new Account();
+		return account;
 	}
 
 	@Override

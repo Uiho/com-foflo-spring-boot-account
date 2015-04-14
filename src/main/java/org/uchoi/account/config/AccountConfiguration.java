@@ -1,4 +1,4 @@
-package org.uchoi.account;
+package org.uchoi.account.config;
 
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,9 +10,9 @@ import org.springframework.context.annotation.PropertySource;
 
 
 @Configuration
-@ImportResource({"classpath:data-context.xml"}) // XML 
 @ComponentScan("org.uchoi.account") // search the com.company package for @Component classes
-@PropertySource("classpath:application.properties") //Properties
+@ImportResource({"classpath:data-context.xml"}) // XML 
+@PropertySource("classpath:application.properties") //Properties: It's no longer using, app.pro will be automatically executed.
 public class AccountConfiguration {
 	
 	@Value("${db.driverClassName}")
