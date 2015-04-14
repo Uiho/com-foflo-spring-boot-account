@@ -2,6 +2,8 @@ package org.uchoi.account.view;
 
 import java.util.Scanner;
 
+import javax.annotation.PostConstruct;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +27,14 @@ public class AccountView {
 		logger.info("Inside AccountView Constructor");
 		keepbanking = true;
 	}
-
+	
+	@PostConstruct  
+	public void initialize(){
+		logger.info("Inside @PostConstruct after bean initialization");
+	}
 	
 	
-	public void showMainMenu(){
+	public String showMainMenu(){
 		try{
 			while(keepbanking){
 				
@@ -68,6 +74,7 @@ public class AccountView {
 		finally{
 			in.close();
 		}
+		return "showMainMenu";
 	}
 	
 	public void createAccount(){

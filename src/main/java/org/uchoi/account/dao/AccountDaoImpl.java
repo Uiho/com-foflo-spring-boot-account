@@ -44,7 +44,7 @@ public class AccountDaoImpl implements AccountDao {
 	
 	@PostConstruct  
 	public void initialize(){
-		this.jdbcTemplate = new JdbcTemplate(dataSource);
+		//this.jdbcTemplate = new JdbcTemplate(dataSource);
 		logger.info("Inside @PostConstruct after bean initialization");
 	}
 
