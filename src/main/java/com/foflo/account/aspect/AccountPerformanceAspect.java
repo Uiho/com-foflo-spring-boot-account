@@ -1,4 +1,4 @@
-package org.uchoi.account.aspect;
+package com.foflo.account.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -13,7 +13,7 @@ public class AccountPerformanceAspect {
 
 	private static Logger logger = LoggerFactory.getLogger(AccountPerformanceAspect.class);
 	
-	@Around("execution(* org.uchoi.account.service.*.*(..))")
+	@Around("execution(* com.foflo.account.service.*.*(..))")
     public Object logTime(ProceedingJoinPoint pjp) throws Throwable {
 		
 		long start = System.currentTimeMillis();

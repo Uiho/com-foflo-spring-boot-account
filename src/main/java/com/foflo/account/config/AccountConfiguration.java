@@ -1,4 +1,4 @@
-package org.uchoi.account.config;
+package com.foflo.account.config;
 
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Value;

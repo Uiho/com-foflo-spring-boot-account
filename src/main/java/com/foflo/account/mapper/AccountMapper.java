@@ -1,11 +1,12 @@
-package org.uchoi.account.mapper;
+package com.foflo.account.mapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
-import org.uchoi.account.data.Account;
-import org.uchoi.account.data.Customer;
+
+import com.foflo.account.data.Account;
+import com.foflo.account.data.Customer;
 
 
 

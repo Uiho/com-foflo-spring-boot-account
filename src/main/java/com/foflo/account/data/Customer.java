@@ -1,4 +1,4 @@
-package org.uchoi.account.data;
+package com.foflo.account.data;
 
 import java.util.HashSet;
 import java.util.Set;

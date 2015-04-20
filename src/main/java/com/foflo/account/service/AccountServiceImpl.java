@@ -1,4 +1,4 @@
-package org.uchoi.account.service;
+package com.foflo.account.service;
 
 import java.util.Map;
 
@@ -6,8 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.uchoi.account.dao.AccountDao;
-import org.uchoi.account.data.Account;
+
+import com.foflo.account.dao.AccountDao;
+import com.foflo.account.data.Account;
 
 @Component("accountService")
 public class AccountServiceImpl implements AccountService{

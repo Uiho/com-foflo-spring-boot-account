@@ -1,4 +1,4 @@
-package org.uchoi.account.dao;
+package com.foflo.account.dao;
 
 import java.util.List;
 import java.util.Map;
@@ -20,10 +20,11 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import org.uchoi.account.data.Account;
-import org.uchoi.account.data.Customer;
-import org.uchoi.account.mapper.AccountMapper;
-import org.uchoi.account.view.AccountView;
+
+import com.foflo.account.data.Account;
+import com.foflo.account.data.Customer;
+import com.foflo.account.mapper.AccountMapper;
+import com.foflo.account.view.AccountView;
 
 @Repository
 @Transactional

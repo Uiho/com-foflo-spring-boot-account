@@ -1,4 +1,4 @@
-package org.uchoi.account.view;
+package com.foflo.account.view;
 
 import java.util.Scanner;
 
@@ -8,7 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.uchoi.account.service.AccountService;
+
+import com.foflo.account.service.AccountService;
 
 @Component("accountView")
 public class AccountView {

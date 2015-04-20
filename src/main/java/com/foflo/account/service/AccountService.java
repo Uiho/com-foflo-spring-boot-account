@@ -1,8 +1,8 @@
-package org.uchoi.account.service;
+package com.foflo.account.service;
 
 import java.util.Map;
 
-import org.uchoi.account.data.Account;
+import com.foflo.account.data.Account;
 
 public interface AccountService {
 	
