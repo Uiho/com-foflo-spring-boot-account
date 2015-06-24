@@ -1,4 +1,4 @@
-package com.foflo.account.aspect;
+package org.foflo.account.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

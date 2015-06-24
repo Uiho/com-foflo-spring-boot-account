@@ -1,9 +1,9 @@
-package com.foflo.account.dao;
+package org.foflo.account.dao;
 
 import java.util.Map;
 
-import com.foflo.account.data.Account;
-import com.foflo.account.data.Customer;
+import org.foflo.account.data.Account;
+import org.foflo.account.data.Customer;
 
 public interface AccountDao {
 	

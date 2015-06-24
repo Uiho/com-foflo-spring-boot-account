@@ -17,7 +17,7 @@
 	
 	<context:annotation-config />
 	
-	<context:component-scan base-package="org.uchoi.account" />
+	<context:component-scan base-package="org.foflo.account" />
 
 	<aop:aspectj-autoproxy />
 

@@ -1,4 +1,4 @@
-package com.foflo.account.aspect;
+package org.foflo.account.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -18,21 +18,21 @@ public class AccountLoggingAspect {
 	
 	
 	
-	@Before("execution(* com.foflo.account.view.*.*(..))")
+	@Before("execution(* org.foflo.account.view.*.*(..))")
 	public void logBefore(JoinPoint jp){
 		
 		logger.info("Entering into "+jp.getSignature());
 	}
 	
 	
-	@After("execution(* com.foflo.account.view.*.*(..))")
+	@After("execution(* org.foflo.account.view.*.*(..))")
 	public void logAfter(JoinPoint jp) {
  
 		logger.info("Escaping from "+jp.getSignature());
  
 	}
 	
-	@AfterReturning(pointcut = "execution(* com.foflo.account.service.AccountServiceImpl.getSpecificAccount(..))", returning= "result")
+	@AfterReturning(pointcut = "execution(* org.foflo.account.service.AccountServiceImpl.getSpecificAccount(..))", returning= "result")
 	public void logAfterReturning(JoinPoint jp, Object result) {
 		
 		logger.info(jp.getSignature()+", return value: "+ result);
@@ -40,7 +40,7 @@ public class AccountLoggingAspect {
 	
 	
 	
-	@AfterThrowing(pointcut="execution(* com.foflo.account.service.AccountServiceImpl.getSpecificAccount(..))", throwing="error")
+	@AfterThrowing(pointcut="execution(* org.foflo.account.service.AccountServiceImpl.getSpecificAccount(..))", throwing="error")
 	public void logAfterThrowing(JoinPoint jp, Throwable error){
 		
 		logger.info(jp.getSignature()+", Error: "+ error);

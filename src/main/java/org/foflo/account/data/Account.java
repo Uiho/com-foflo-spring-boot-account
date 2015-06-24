@@ -1,4 +1,4 @@
-package com.foflo.account.data;
+package org.foflo.account.data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

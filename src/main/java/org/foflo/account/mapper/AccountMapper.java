@@ -1,12 +1,11 @@
-package com.foflo.account.mapper;
+package org.foflo.account.mapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.foflo.account.data.Account;
+import org.foflo.account.data.Customer;
 import org.springframework.jdbc.core.RowMapper;
-
-import com.foflo.account.data.Account;
-import com.foflo.account.data.Customer;
 
 
 

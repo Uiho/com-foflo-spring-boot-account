@@ -1,8 +1,8 @@
-package com.foflo.account.service;
+package org.foflo.account.service;
 
 import java.util.Map;
 
-import com.foflo.account.data.Account;
+import org.foflo.account.data.Account;
 
 public interface AccountService {
 	

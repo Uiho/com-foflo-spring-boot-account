@@ -1,5 +1,6 @@
-package com.foflo.account;
+package org.foflo.account;
 
+import org.foflo.account.view.AccountView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -8,8 +9,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
-
-import com.foflo.account.view.AccountView;
 
 @SpringBootApplication
 public class SpringBootAccountApplication implements CommandLineRunner {
